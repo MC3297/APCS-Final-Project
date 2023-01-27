@@ -1,4 +1,4 @@
-# APCS-Final-Project- Matthew Chen
+# Pre-APCS-Final-Project - Matthew Chen
 # What it does
 This project takes in connections between friends and creates a undirected graph. Every query takes in a friend name and recommends people that haven't been recommended already based off of the number of intermediate friends. In graph terms, on the i-th query of a node, it will print all nodes distance i from the given node.
 # How to use
