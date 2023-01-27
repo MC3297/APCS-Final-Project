@@ -68,17 +68,14 @@ public class Final_Project {
             ArrayList<Integer> popped = new ArrayList<>();
             //Breadth-First-Search
             while (!q[id].isEmpty() && q[id].peek().dist == thisdist) {
-                //System.out.println("queue is " + q[id]);
                 Qitem curr = q[id].poll();
                 popped.add(curr.node);
-                if (graph.adj.containsKey(curr.node)) {
-                    for (int j: graph.adj.get(curr.node)) {
-                        if (!visited[id][j]) {
-                            q[id].add(new Qitem(j, curr.dist+1));
-                            visited[id][j] = true;
-                        }
+                for (int j: graph.adj.get(curr.node)) {
+                    if (!visited[id][j]) {
+                        q[id].add(new Qitem(j, curr.dist+1));
+                        visited[id][j] = true;
                     }
-                }
+                 }
             }
             System.out.print("Recommended friends are: ");
             for (int j: popped) {
